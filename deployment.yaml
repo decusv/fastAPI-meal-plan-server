@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meal-plan-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meal-plan-app
+  template:
+    metadata:
+      labels:
+        app: meal-plan-app
+    spec:
+      containers:
+        - name: meal-plan-app
+          image: gcr.io/hazel-charter-408317/meal-plan-app:v1.0
+          ports:
+            - containerPort: 80

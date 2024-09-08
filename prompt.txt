@@ -1,0 +1,51 @@
+Generate a meal plan with the following criteria:
+1. The meal plan should have a name and a description.
+2. Include at least three meals, each with a name, description, and a list of steps to prepare the recipe.
+3. Specify nutritional information for each meal.
+4. Reply only in the provided JSON format.
+5. Use the earlier provided meal tags to generate recipes. Recipes generated should be strictly comply with the meal tags shared.
+
+Example JSON Payload:
+```json
+{
+    "name": "Healthy Weekday Meals",
+    "description": "A collection of nutritious meals for weekdays",
+    "meals": [
+        {
+            "recipe": {
+                "name": "Grilled Chicken Salad",
+                "description": "Fresh and healthy salad with grilled chicken",
+                "steps": ["Grill the chicken", "Chop the vegetables", "Mix everything together"],
+                "nutritional_info": {
+                    "calories": 300,
+                    "protein": 25,
+                    "fiber": 5
+                }
+            }
+        },
+        {
+            "recipe": {
+                "name": "Quinoa Stir-Fry",
+                "description": "Stir-fried quinoa with assorted vegetables",
+                "steps": ["Cook quinoa", "Stir-fry vegetables", "Combine with quinoa"],
+                "nutritional_info": {
+                    "calories": 350,
+                    "protein": 15,
+                    "fiber": 8
+                }
+            }
+        },
+        {
+            "recipe": {
+                "name": "Salmon and Broccoli Bake",
+                "description": "Baked salmon with roasted broccoli",
+                "steps": ["Bake salmon", "Roast broccoli", "Serve together"],
+                "nutritional_info": {
+                    "calories": 400,
+                    "protein": 30,
+                    "fiber": 6
+                }
+            }
+        }
+    ]
+}
